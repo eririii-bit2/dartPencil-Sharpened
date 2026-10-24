@@ -42,7 +42,7 @@ Defines common properties and behaviors for all pencil types, using encapsulatio
 ---
 
 ### What it does
-* Open this **[Dart run link](https://dartpad.dev/?id=f3667c4a3bea3f6b4a750a5ff7b0ffd7)**, then click 'run'. 
+* Open this **[Dart run link](https://dartpad.dev/?id=f3667c4a3bea3f6b4a750a5ff7b0ffd7)**, then click '*run*'. 
 
 ### License
 
