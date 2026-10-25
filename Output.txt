@@ -1,0 +1,27 @@
+=== POLYMORPHISM & OVERRIDDEN METHODS ===
+Color: Blue
+Graphite: 2
+Eraser remaining: 1.0
+Pigment Type: Oil-based
+Drawing vibrant art with the Blue colored pencil (Oil-based pigment).
+The Blue pencil is erasing...
+------------------------------------
+Color: Black
+Graphite: 1.5
+Eraser remaining: 0.5
+Lead Size: 0.5mm
+Drafting precise 0.5mm lines with the Black mechanical pencil.
+The Black pencil is erasing...
+------------------------------------
+
+=== ABSTRACT INTERFACE IMPLEMENTATION ===
+Sharpened Blue colored pencil. Graphite restored to 2.5.
+Mechanical pencils advance lead instead of sharpening.
+
+=== MIXIN USAGE INSIDE & OUTSIDE INHERITANCE TREE ===
+[Mechanical Pencil Refill]
+Refill successful! Remaining refills: 2
+
+[Stapler Refill]
+Stapling documents with model Heavy Duty 200.
+Refill successful! Remaining refills: 2
