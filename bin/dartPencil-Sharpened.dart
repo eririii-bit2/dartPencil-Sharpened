@@ -120,7 +120,6 @@ void main() async {
 
   List<Pencil> pencils = [coloredPencil, mechPencil];
 
-  print('=== POLYMORPHISM & OVERRIDDEN METHODS ===');
   for (Pencil pencil in pencils) {
     pencil.displayInfo();
     pencil.sketch();
