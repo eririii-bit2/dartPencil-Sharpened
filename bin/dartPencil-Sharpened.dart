@@ -1,5 +1,5 @@
 abstract class Sharpenable {
-  void sharpen(); 
+  void sharpen();
 }
 
 mixin Refillable {
@@ -41,6 +41,13 @@ class Pencil {
     } else {
       print('The $color pencil has no eraser left.');
     }
+  }
+
+  Future<String> syncDrawingData() async {
+    print('[Async task running in background...]');
+        
+    await Future.delayed(const Duration(seconds: 2));
+    return 'Cloud Sync Success: $color pencil artwork data saved successfully!';
   }
 
   void displayInfo() {
@@ -107,7 +114,7 @@ class Stapler with Refillable {
   }
 }
 
-void main() {
+void main() async {
   ColoredPencil coloredPencil = ColoredPencil(2.0, 'Blue', 1.0, 'Oil-based');
   MechanicalPencil mechPencil = MechanicalPencil(1.5, 'Black', 0.5, 0.5);
 
@@ -120,19 +127,22 @@ void main() {
     pencil.erase();
     print('------------------------------------');
   }
-
-  print('\n=== ABSTRACT INTERFACE IMPLEMENTATION ===');
   coloredPencil.sharpen();
   mechPencil.sharpen();
 
-  print('\n=== MIXIN USAGE INSIDE & OUTSIDE INHERITANCE TREE ===');
-  // Mixin call inside Pencil hierarchy
-  print('[Mechanical Pencil Refill]');
+  print('\n[Mechanical Pencil Refill]');
   mechPencil.refill();
 
-  // Mixin call in class outside Pencil hierarchy
   print('\n[Stapler Refill]');
   Stapler stapler = Stapler('Heavy Duty 200');
   stapler.staple();
   stapler.refill();
+
+  print('\n');
+  print('Initiating cloud sync for colored pencil...');
+
+  String syncResult = await coloredPencil.syncDrawingData();
+
+  print('$syncResult');
+  print('Execution finished.');
 }
